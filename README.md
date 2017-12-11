@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Angular5Resume
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.5.
@@ -25,3 +26,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+=======
+# Angular5-Resume
+My personal resume written in Angular 5
+>>>>>>> 1024b1c32016c745101dfd2a49e47007d1135342
