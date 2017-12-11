@@ -11,8 +11,8 @@ export class HeaderComponent implements OnInit {
   Avatar: string;
 
   constructor() {
-    this.Banner = '../../assets/Background.jpg';
-    this.Avatar = '../../assets/Avatar.jpg';
+    this.Banner = './assets/Background.jpg';
+    this.Avatar = 'assets/Avatar.jpg';
   }
 
   ngOnInit() {
