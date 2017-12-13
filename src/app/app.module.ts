@@ -12,6 +12,7 @@ import { BodyComponent } from './pages/resume/body';
 import { DalService } from './services';
 import { CardComponent } from './pages/resume/body/card/card.component';
 import { TagComponent } from './pages/resume/body/card/tag/tag.component';
+import { AccordionComponent } from './pages/resume/body/accordion/accordion.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { TagComponent } from './pages/resume/body/card/tag/tag.component';
     HeaderComponent,
     BodyComponent,
     CardComponent,
-    TagComponent
+    TagComponent,
+    AccordionComponent
   ],
   imports: [
     NgbModule.forRoot(),

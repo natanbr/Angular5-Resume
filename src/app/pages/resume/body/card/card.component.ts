@@ -16,7 +16,9 @@ export class CardComponent implements OnInit {
   constructor() {  }
 
   ngOnInit() {
-    this.DisplayTags = this.card.Tags.length > 0;
+    if (this.card) {
+      this.DisplayTags = this.card.Tags.length > 0;
+    }
   }
 
 }

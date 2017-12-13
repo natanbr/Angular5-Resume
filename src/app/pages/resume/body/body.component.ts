@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, } from '@angular/core';
 import { DalService } from '../../../services';
 import { Card } from '../../../data';
 
@@ -12,6 +12,11 @@ export class BodyComponent implements OnInit {
   Cards: Array<Card>;
 
   constructor(private dal: DalService) {
+    
+  }
+
+
+  ngOnInit() {
     const projects = this.dal.generateResumeData();
     this.Cards = new Array<any>();
     projects.forEach(project => {
@@ -22,10 +27,5 @@ export class BodyComponent implements OnInit {
         project.links
       ));
     });
-  }
-
-
-  ngOnInit() {
-
   }
 }
