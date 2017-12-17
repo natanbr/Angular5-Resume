@@ -2,16 +2,15 @@
     <div class="card-body">
       <div class="accordion-header" (click)="toggleIsOpen($event)">
         <h5 class="card-subtitle mb-2 text-muted time-line" [ngClass]="{'accordion-header-closed': !isOpen}">
-            {{card.SubTitle}}
+            {{accordionSubTitle}}
         </h5>
         <h4 class="card-title" [ngClass]="{'accordion-header-closed': !isOpen}">
-          <a href class="card-title">{{title}}</a>
+          <a href class="card-title">{{accordionTitle}}</a>
         </h4>
       </div>
       <div class="panel-collapse" [hidden]="!isOpen">
-        <p class="card-text">{{card.Text}}</p>
-        <div *ngIf="DisplayTags">
-          <app-tag *ngFor="let tag of card.Tags" [tag]="tag">{{tag}}</app-tag>
+        <div class="accordion-body">
+          <ng-template appAccordionContent></ng-template>
         </div>
       </div>
     </div>

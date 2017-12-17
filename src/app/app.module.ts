@@ -12,7 +12,8 @@ import { BodyComponent } from './pages/resume/body';
 import { DalService } from './services';
 import { CardComponent } from './pages/resume/body/card/card.component';
 import { TagComponent } from './pages/resume/body/card/tag/tag.component';
-import { AccordionComponent } from './pages/resume/body/accordion/accordion.component';
+import { AccordionComponent } from './componentTemplates/accordion/accordion.component';
+import { AccordionDirective } from './componentTemplates/accordion/accordion.directive';
 
 @NgModule({
   declarations: [
@@ -22,13 +23,15 @@ import { AccordionComponent } from './pages/resume/body/accordion/accordion.comp
     BodyComponent,
     CardComponent,
     TagComponent,
-    AccordionComponent
+    AccordionComponent,
+    AccordionDirective
   ],
   imports: [
     NgbModule.forRoot(),
     BrowserModule,
     AppRoutingModule
   ],
+  entryComponents: [ CardComponent ],
   providers: [DalService],
   bootstrap: [AppComponent]
 })

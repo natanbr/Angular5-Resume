@@ -1,3 +1,6 @@
 <ul class='resume-cards'>
-    <app-accordion *ngFor="let card of Cards" [card]="card"></app-accordion>
+    <app-accordion *ngFor="let card of cards" 
+        [title]="card.Title"
+        [subTitle]="card.SubTitle" 
+        [component]="type" [data]="card"></app-accordion>
 </ul>

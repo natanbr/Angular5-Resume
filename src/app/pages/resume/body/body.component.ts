@@ -1,6 +1,7 @@
-import { Component, OnInit, } from '@angular/core';
+import { Component, OnInit, Type, } from '@angular/core';
 import { DalService } from '../../../services';
 import { Card } from '../../../data';
+import { CardComponent } from './card/index';
 
 @Component({
   selector: 'app-body',
@@ -9,23 +10,24 @@ import { Card } from '../../../data';
 })
 export class BodyComponent implements OnInit {
 
-  Cards: Array<Card>;
+  cards: Array<Card>;
+  type: Type<any>;
 
   constructor(private dal: DalService) {
-    
+
+     this.type = CardComponent;
+     const projects = this.dal.generateResumeData();
+     this.cards = new Array<any>();
+     projects.forEach(project => {
+       this.cards.push(new Card(
+         project.title,
+         project.subTitle,
+         project.text,
+         project.links
+       ));
+     });
   }
 
-
   ngOnInit() {
-    const projects = this.dal.generateResumeData();
-    this.Cards = new Array<any>();
-    projects.forEach(project => {
-      this.Cards.push(new Card(
-        project.title,
-        project.subTitle,
-        project.text,
-        project.links
-      ));
-    });
   }
 }

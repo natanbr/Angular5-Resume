@@ -1,10 +1,4 @@
-<div class="card coustom-card" >
-  <div class="card-body">
-    <h5 class="card-subtitle mb-2 text-muted time-line">{{card.SubTitle}}</h5>
-    <h4 class="card-title">{{card.Title}}</h4>
-    <p class="card-text">{{card.Text}}</p>
-    <div *ngIf="DisplayTags">
-      <app-tag *ngFor="let tag of card.Tags" [tag]="tag">{{tag}}</app-tag>
-    </div>
-  </div>
+<p class="card-text">{{card.Text}}</p>
+<div *ngIf="DisplayTags">
+  <app-tag *ngFor="let tag of card.Tags" [tag]="tag">{{tag}}</app-tag>
 </div>
